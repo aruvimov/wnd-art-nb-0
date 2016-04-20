@@ -1,1 +1,42 @@
-# dummy
+gsl/libchrm_a-specfunc.o: gsl/specfunc.cpp gsl/specfunc.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/math.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/crtdefs.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/_mingw.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/_mingw_mac.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/_mingw_secapi.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/vadefs.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/sdks/_mingw_directx.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/sdks/_mingw_ddk.h \
+ c:/Programs/mingw-w64/mingw32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed/limits.h \
+ c:/Programs/mingw-w64/mingw32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed/syslimits.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/limits.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/sys/types.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/_mingw_off_t.h
+
+gsl/specfunc.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/math.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/crtdefs.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/_mingw.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/_mingw_mac.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/_mingw_secapi.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/vadefs.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/sdks/_mingw_directx.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/sdks/_mingw_ddk.h:
+
+c:/Programs/mingw-w64/mingw32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed/limits.h:
+
+c:/Programs/mingw-w64/mingw32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed/syslimits.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/limits.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/sys/types.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/_mingw_off_t.h:

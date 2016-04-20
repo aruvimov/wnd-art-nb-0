@@ -1,1 +1,28 @@
-# dummy
+transforms/libchrm_a-radon.o: transforms/radon.cpp \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/math.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/crtdefs.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/_mingw.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/_mingw_mac.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/_mingw_secapi.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/vadefs.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/sdks/_mingw_directx.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/sdks/_mingw_ddk.h \
+ transforms/radon.h
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/math.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/crtdefs.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/_mingw.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/_mingw_mac.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/_mingw_secapi.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/vadefs.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/sdks/_mingw_directx.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/sdks/_mingw_ddk.h:
+
+transforms/radon.h:

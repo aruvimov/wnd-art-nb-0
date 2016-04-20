@@ -1,1 +1,31 @@
-# dummy
+transforms/wavelet/libchrm_a-Common.o: transforms/wavelet/Common.cpp \
+ transforms/wavelet/Common.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/string.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/crtdefs.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/_mingw.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/_mingw_mac.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/_mingw_secapi.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/vadefs.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/sdks/_mingw_directx.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/sdks/_mingw_ddk.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/sec_api/string_s.h
+
+transforms/wavelet/Common.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/string.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/crtdefs.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/_mingw.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/_mingw_mac.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/_mingw_secapi.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/vadefs.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/sdks/_mingw_directx.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/sdks/_mingw_ddk.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/sec_api/string_s.h:

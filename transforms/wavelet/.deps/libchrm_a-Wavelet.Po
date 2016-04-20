@@ -1,1 +1,94 @@
-# dummy
+transforms/wavelet/libchrm_a-Wavelet.o: transforms/wavelet/Wavelet.cpp \
+ transforms/wavelet/Wavelet.h transforms/wavelet/DataGrid.h \
+ transforms/wavelet/Filter.h transforms/wavelet/FilterSet.h \
+ transforms/wavelet/Common.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/string.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/crtdefs.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/_mingw.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/_mingw_mac.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/_mingw_secapi.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/vadefs.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/sdks/_mingw_directx.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/sdks/_mingw_ddk.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/sec_api/string_s.h \
+ transforms/wavelet/DataGrid3D.h transforms/wavelet/DataGrid2D.h \
+ transforms/wavelet/wt.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/memory.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/stdlib.h \
+ c:/Programs/mingw-w64/mingw32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed/limits.h \
+ c:/Programs/mingw-w64/mingw32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed/syslimits.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/limits.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/sec_api/stdlib_s.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/malloc.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/stdio.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/_mingw_print_push.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/_mingw_off_t.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/swprintf.inl \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/sec_api/stdio_s.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/_mingw_print_pop.h \
+ c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/math.h \
+ transforms/wavelet/convolution.h
+
+transforms/wavelet/Wavelet.h:
+
+transforms/wavelet/DataGrid.h:
+
+transforms/wavelet/Filter.h:
+
+transforms/wavelet/FilterSet.h:
+
+transforms/wavelet/Common.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/string.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/crtdefs.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/_mingw.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/_mingw_mac.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/_mingw_secapi.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/vadefs.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/sdks/_mingw_directx.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/sdks/_mingw_ddk.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/sec_api/string_s.h:
+
+transforms/wavelet/DataGrid3D.h:
+
+transforms/wavelet/DataGrid2D.h:
+
+transforms/wavelet/wt.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/memory.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/stdlib.h:
+
+c:/Programs/mingw-w64/mingw32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed/limits.h:
+
+c:/Programs/mingw-w64/mingw32/lib/gcc/i686-w64-mingw32/5.3.0/include-fixed/syslimits.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/limits.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/sec_api/stdlib_s.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/malloc.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/stdio.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/_mingw_print_push.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/_mingw_off_t.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/swprintf.inl:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/sec_api/stdio_s.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/_mingw_print_pop.h:
+
+c:/Programs/mingw-w64/mingw32/i686-w64-mingw32/include/math.h:
+
+transforms/wavelet/convolution.h:

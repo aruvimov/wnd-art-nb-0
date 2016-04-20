@@ -1,1 +1,7 @@
-# dummy
+transforms/wavelet/libchrm_a-FilterSet.o: \
+ transforms/wavelet/FilterSet.cpp transforms/wavelet/FilterSet.h \
+ transforms/wavelet/Filter.h
+
+transforms/wavelet/FilterSet.h:
+
+transforms/wavelet/Filter.h:
