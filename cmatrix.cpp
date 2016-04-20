@@ -34,7 +34,6 @@
 #include <stdio.h>
 #include "cmatrix.h"
 #include "ImageTransforms.h"
-#include "colors/FuzzyCalc.h"
 #include "transforms/fft/bcb_fftw3/fftw3.h"
 #include "transforms/chebyshev.h"
 #include "transforms/ChebyshevFourier.h"
@@ -921,121 +920,7 @@ void ImageMatrix::convolve(const pixDataMat &filter) {
 	}
 }
 
-/* find the basic color statistics
-   hue_avg_p -double *- average hue
-   hue_std_p -double *- standard deviation of the hue
-   sat_avg_p -double *- average saturation
-   sat_std_p -double *- standard deviation of the saturation
-   val_avg_p -double *- average value
-   val_std_p -double *- standard deviation of the value
-   max_color_p -double *- the most popular color
-   colors -double *- a histogram of colors
-   if values are NULL - the value is not computed
-*/
 
-void ImageMatrix::GetColorStatistics(double *hue_avg_p, double *hue_std_p, double *sat_avg_p, double *sat_std_p, double *val_avg_p, double *val_std_p, double *max_color_p, double *colors) const {
-	double hue_avg=0, hue_std=0, sat_avg=0, sat_std=0, val_avg=0, val_std=0;
-	double delta, M2h=0, M2s=0, M2v=0;
-	unsigned int a, x, y, pixel_index=0;
-	unsigned long color_index=0;
-	double max_val,pixel_num;
-	double certainties[COLORS_NUM+1];
-	byte h, s, v;
-	readOnlyColors clr_plane = ReadableColors();
-
-	pixel_num=height*width;
-
-	/* calculate the average hue, saturation, value */
-	if (hue_avg_p) *hue_avg_p=0;
-	if (sat_avg_p) *sat_avg_p=0;
-	if (val_avg_p) *val_avg_p=0;
-	if (colors)
-		for (a=0;a<=COLORS_NUM;a++)
-			colors[a]=0;
-	for (y = 0; y < height; y++) {
-		for (x = 0; x < width; x++) {
-			h = clr_plane(y,x).h;
-			s = clr_plane(y,x).s;
-			v = clr_plane(y,x).v;
-			// This is Welford's cumulative mean+variance algorithm as reported by Knuth
-			pixel_index++;
-			// h
-			delta = h - hue_avg;
-			hue_avg += delta/pixel_index;
-			M2h += delta * (h - hue_avg);
-			// s
-			delta = s - sat_avg;
-			sat_avg += delta/pixel_index;
-			M2s += delta * (s - sat_avg);
-			// v
-			delta = v - val_avg;
-			val_avg += delta/pixel_index;
-			M2v += delta * (v - val_avg);
-
-			color_index=FindColor(h,s,v,certainties);
-			colors[color_index]+=1;
-		}
-	}
-	hue_std = sqrt ( M2h / (pixel_index - 1) );
-	sat_std = sqrt ( M2s / (pixel_index - 1) );
-	val_std = sqrt ( M2v / (pixel_index - 1) );
-
-	if (hue_avg_p) *hue_avg_p = hue_avg;
-	if (sat_avg_p) *sat_avg_p = sat_avg;
-	if (val_avg_p) *val_avg_p = val_avg;
-	if (hue_std_p) *hue_std_p = hue_std;
-	if (sat_std_p) *sat_std_p = sat_std;
-	if (val_std_p) *val_std_p = val_std;
-
-	/* max color (the most common color in the image) */
-	if (max_color_p) {
-		*max_color_p=0;
-		max_val=0.0;
-		for (a = 0; a <= COLORS_NUM; a++) {
-			if (colors[a] > max_val) {
-				max_val=colors[a];
-				*max_color_p=a;
-			}
-		}
-	}
-	/* colors */
-	if (colors)
-		for (a = 0; a <= COLORS_NUM; a++)
-			colors[a]=colors[a]/pixel_num;
-}
-
-/* ColorTransform
-   Transform a color image to a greyscale image such that each
-   color_hist -double *- a histogram (of COLORS_NUM + 1 bins) of the colors. This parameter is ignored if NULL
-   use_hue -int- 0 if classifying colors, 1 if using the hue component of the HSV vector
-   grey level represents a different color
-*/
-void ImageMatrix::ColorTransform (const ImageMatrix &matrix_IN) {  
-	unsigned int x,y; //,base_color;
-	double cb_intensity;
-	double max_range = pow((double)2,8)-1;
-	HSVcolor hsv_pixel;
-	unsigned long color_index=0;   
-	double certainties[COLORS_NUM+1];
-
-	copyFields (matrix_IN);
-	// The result is an intensity image, so eliminate the color plane
-	ColorMode = cmGRAY;
-	allocate (matrix_IN.width, matrix_IN.height);
-	writeablePixels out_plane = WriteablePixels();
-	readOnlyColors clr_plane = matrix_IN.ReadableColors();
-
-	// find the colors
-	for( y = 0; y < height; y++ ) {
-		for( x = 0; x < width; x++ ) { 
-			hsv_pixel = clr_plane (y, x);
-			color_index = FindColor( hsv_pixel.h,  hsv_pixel.s, hsv_pixel.v, certainties );
-			// convert the color index to a greyscale value
-			cb_intensity = int( ( max_range * color_index ) / COLORS_NUM );
-			out_plane (y, x) = stats.add (cb_intensity);
-		}
-	}
-}
 
 void ImageMatrix::HueTransform (const ImageMatrix &matrix_IN) {  
 	unsigned int x,y; //,base_color;

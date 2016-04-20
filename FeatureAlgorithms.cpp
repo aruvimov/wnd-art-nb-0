@@ -499,36 +499,9 @@ static bool GiniCoefficientReg = ComputationTaskInstances::add (new GiniCoeffici
    compute the Color Histogram
 
 */
-ColorHistogram::ColorHistogram() : FeatureAlgorithm ("Color Histogram", COLORS_NUM+1) {
-	//cout << "Instantiating new " << name << " object." << endl;
-}
 
-std::vector<double> ColorHistogram::execute (const ImageMatrix &IN_matrix) const {
-	std::vector<double> coeffs;
-	if (verbosity > 3) std::cout << "calculating " << name << std::endl;
 
-	coeffs.assign(n_features, 0);
-	unsigned int x,y, width = IN_matrix.width, height = IN_matrix.height;
-	HSVcolor hsv_pixel;
-	unsigned long color_index=0;   
-	double certainties[COLORS_NUM+1];
 
-	readOnlyColors clr_plane = IN_matrix.ReadableColors();
-
-	// find the colors
-	for( y = 0; y < height; y++ ) {
-		for( x = 0; x < width; x++ ) { 
-			hsv_pixel = clr_plane (y, x);
-			color_index = FindColor( hsv_pixel.h,  hsv_pixel.s, hsv_pixel.v, certainties );
-			coeffs[ color_index ]++;
-		}
-	}
-	/* normalize the color histogram */
-	for (color_index = 0; color_index <= COLORS_NUM; color_index++)
-		coeffs[color_index] /= (width*height);	 
-
-	return coeffs;
-}
 
 // Register a static instance of the class using a global bool
 static bool ColorHistogramReg = ComputationTaskInstances::add (new ColorHistogram);

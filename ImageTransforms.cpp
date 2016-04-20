@@ -35,7 +35,6 @@
 #include "cmatrix.h"
 #include "FeatureNames.h"
 #include "ImageTransforms.h"
-#include "colors/FuzzyCalc.h" // for definition of compiler constant COLORS_NUM
 #include "transforms/fft/bcb_fftw3/fftw3.h"
 
 /* global variable */
