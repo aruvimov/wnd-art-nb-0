@@ -1102,7 +1102,6 @@ libchrm_a-cmatrix.obj: cmatrix.cpp
 #	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) \
 #	$(AM_V_CXX_no)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libchrm_a_CXXFLAGS) $(CXXFLAGS) -c -o libchrm_a-cmatrix.obj `if test -f 'cmatrix.cpp'; then $(CYGPATH_W) 'cmatrix.cpp'; else $(CYGPATH_W) '$(srcdir)/cmatrix.cpp'; fi`
 
-
 gsl/libchrm_a-specfunc.o: gsl/specfunc.cpp
 	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libchrm_a_CXXFLAGS) $(CXXFLAGS) -MT gsl/libchrm_a-specfunc.o -MD -MP -MF gsl/$(DEPDIR)/libchrm_a-specfunc.Tpo -c -o gsl/libchrm_a-specfunc.o `test -f 'gsl/specfunc.cpp' || echo '$(srcdir)/'`gsl/specfunc.cpp
 	$(AM_V_at)$(am__mv) gsl/$(DEPDIR)/libchrm_a-specfunc.Tpo gsl/$(DEPDIR)/libchrm_a-specfunc.Po

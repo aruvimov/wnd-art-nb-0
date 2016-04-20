@@ -41,7 +41,6 @@
 #define OUR_EQ(x,v) (((v - OUR_EPSILON) < x) && (x <( v + OUR_EPSILON)))
 #include "cmatrix.h"
 #include "TrainingSet.h"
-#include "colors/FuzzyCalc.h"
 #include "signatures.h"
 #include "WORMfile.h"
 #include "FeatureNames.h"

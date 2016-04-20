@@ -118,7 +118,6 @@ am_libchrm_a_OBJECTS = libchrm_a-FeatureAlgorithms.$(OBJEXT) \
 	libchrm_a-FeatureNames.$(OBJEXT) \
 	libchrm_a-ImageTransforms.$(OBJEXT) libchrm_a-Tasks.$(OBJEXT) \
 	libchrm_a-cmatrix.$(OBJEXT) \
-	colors/libchrm_a-FuzzyCalc.$(OBJEXT) \
 	gsl/libchrm_a-specfunc.$(OBJEXT) \
 	statistics/libchrm_a-CombFirst4Moments.$(OBJEXT) \
 	statistics/libchrm_a-FeatureStatistics.$(OBJEXT) \
@@ -674,8 +673,6 @@ libchrm_a_SOURCES = \
   Tasks.h \
   cmatrix.cpp \
   cmatrix.h \
-  colors/FuzzyCalc.cpp \
-  colors/FuzzyCalc.h \
   gsl/specfunc.cpp \
   gsl/specfunc.h \
   statistics/CombFirst4Moments.cpp \
@@ -781,8 +778,6 @@ colors/$(am__dirstamp):
 colors/$(DEPDIR)/$(am__dirstamp):
 	@$(MKDIR_P) colors/$(DEPDIR)
 	@: > colors/$(DEPDIR)/$(am__dirstamp)
-colors/libchrm_a-FuzzyCalc.$(OBJEXT): colors/$(am__dirstamp) \
-	colors/$(DEPDIR)/$(am__dirstamp)
 gsl/$(am__dirstamp):
 	@$(MKDIR_P) gsl
 	@: > gsl/$(am__dirstamp)
@@ -985,7 +980,6 @@ distclean-compile:
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libchrm_a-Tasks.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libchrm_a-cmatrix.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/libchrm_a-wndchrm_error.Po@am__quote@
-@AMDEP_TRUE@@am__include@ @am__quote@colors/$(DEPDIR)/libchrm_a-FuzzyCalc.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@gsl/$(DEPDIR)/libchrm_a-specfunc.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@statistics/$(DEPDIR)/libchrm_a-CombFirst4Moments.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@statistics/$(DEPDIR)/libchrm_a-FeatureStatistics.Po@am__quote@
@@ -1107,20 +1101,6 @@ libchrm_a-cmatrix.obj: cmatrix.cpp
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='cmatrix.cpp' object='libchrm_a-cmatrix.obj' libtool=no @AMDEPBACKSLASH@
 @AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
 @am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libchrm_a_CXXFLAGS) $(CXXFLAGS) -c -o libchrm_a-cmatrix.obj `if test -f 'cmatrix.cpp'; then $(CYGPATH_W) 'cmatrix.cpp'; else $(CYGPATH_W) '$(srcdir)/cmatrix.cpp'; fi`
-
-colors/libchrm_a-FuzzyCalc.o: colors/FuzzyCalc.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libchrm_a_CXXFLAGS) $(CXXFLAGS) -MT colors/libchrm_a-FuzzyCalc.o -MD -MP -MF colors/$(DEPDIR)/libchrm_a-FuzzyCalc.Tpo -c -o colors/libchrm_a-FuzzyCalc.o `test -f 'colors/FuzzyCalc.cpp' || echo '$(srcdir)/'`colors/FuzzyCalc.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) colors/$(DEPDIR)/libchrm_a-FuzzyCalc.Tpo colors/$(DEPDIR)/libchrm_a-FuzzyCalc.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='colors/FuzzyCalc.cpp' object='colors/libchrm_a-FuzzyCalc.o' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libchrm_a_CXXFLAGS) $(CXXFLAGS) -c -o colors/libchrm_a-FuzzyCalc.o `test -f 'colors/FuzzyCalc.cpp' || echo '$(srcdir)/'`colors/FuzzyCalc.cpp
-
-colors/libchrm_a-FuzzyCalc.obj: colors/FuzzyCalc.cpp
-@am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libchrm_a_CXXFLAGS) $(CXXFLAGS) -MT colors/libchrm_a-FuzzyCalc.obj -MD -MP -MF colors/$(DEPDIR)/libchrm_a-FuzzyCalc.Tpo -c -o colors/libchrm_a-FuzzyCalc.obj `if test -f 'colors/FuzzyCalc.cpp'; then $(CYGPATH_W) 'colors/FuzzyCalc.cpp'; else $(CYGPATH_W) '$(srcdir)/colors/FuzzyCalc.cpp'; fi`
-@am__fastdepCXX_TRUE@	$(AM_V_at)$(am__mv) colors/$(DEPDIR)/libchrm_a-FuzzyCalc.Tpo colors/$(DEPDIR)/libchrm_a-FuzzyCalc.Po
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	$(AM_V_CXX)source='colors/FuzzyCalc.cpp' object='colors/libchrm_a-FuzzyCalc.obj' libtool=no @AMDEPBACKSLASH@
-@AMDEP_TRUE@@am__fastdepCXX_FALSE@	DEPDIR=$(DEPDIR) $(CXXDEPMODE) $(depcomp) @AMDEPBACKSLASH@
-@am__fastdepCXX_FALSE@	$(AM_V_CXX@am__nodep@)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libchrm_a_CXXFLAGS) $(CXXFLAGS) -c -o colors/libchrm_a-FuzzyCalc.obj `if test -f 'colors/FuzzyCalc.cpp'; then $(CYGPATH_W) 'colors/FuzzyCalc.cpp'; else $(CYGPATH_W) '$(srcdir)/colors/FuzzyCalc.cpp'; fi`
 
 gsl/libchrm_a-specfunc.o: gsl/specfunc.cpp
 @am__fastdepCXX_TRUE@	$(AM_V_CXX)$(CXX) $(DEFS) $(DEFAULT_INCLUDES) $(INCLUDES) $(AM_CPPFLAGS) $(CPPFLAGS) $(libchrm_a_CXXFLAGS) $(CXXFLAGS) -MT gsl/libchrm_a-specfunc.o -MD -MP -MF gsl/$(DEPDIR)/libchrm_a-specfunc.Tpo -c -o gsl/libchrm_a-specfunc.o `test -f 'gsl/specfunc.cpp' || echo '$(srcdir)/'`gsl/specfunc.cpp

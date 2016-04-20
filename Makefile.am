@@ -18,8 +18,6 @@ libchrm_a_SOURCES = \
   Tasks.h \
   cmatrix.cpp \
   cmatrix.h \
-  colors/FuzzyCalc.cpp \
-  colors/FuzzyCalc.h \
   gsl/specfunc.cpp \
   gsl/specfunc.h \
   statistics/CombFirst4Moments.cpp \
