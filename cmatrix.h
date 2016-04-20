@@ -39,7 +39,6 @@
 #include <string> // for source field
 #include <vector> // CEC, required for issue 2, see https://github.com/wnd-charm/wnd-charm/issues/2
 #include "Eigen/Dense"
-#include "colors/FuzzyCalc.h"
 #include "statistics/Moments.h"
 //#define min(a,b) (((a) < (b)) ? (a) : (b))
 //#define max(a,b) (((a) < (b)) ? (b) : (a))

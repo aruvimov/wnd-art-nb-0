@@ -985,7 +985,6 @@ include ./$(DEPDIR)/libchrm_a-ImageTransforms.Po
 include ./$(DEPDIR)/libchrm_a-Tasks.Po
 include ./$(DEPDIR)/libchrm_a-cmatrix.Po
 include ./$(DEPDIR)/libchrm_a-wndchrm_error.Po
-include colors/$(DEPDIR)/libchrm_a-FuzzyCalc.Po
 include gsl/$(DEPDIR)/libchrm_a-specfunc.Po
 include statistics/$(DEPDIR)/libchrm_a-CombFirst4Moments.Po
 include statistics/$(DEPDIR)/libchrm_a-FeatureStatistics.Po
